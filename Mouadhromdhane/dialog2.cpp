@@ -11,6 +11,9 @@ Dialog2::Dialog2(QWidget *parent) :
     ui->setupUi(this);
     QString titre = "Comparaisons Par Mois";
     this->setWindowTitle(titre);
+    QDate date = QDate::currentDate();
+ui->dateEdit->setDate(date);
+ui->dateEdit_2->setDate(date);
 }
 
 Dialog2::~Dialog2()
@@ -30,9 +33,10 @@ qry.prepare("SELECT * FROM GESTIONDEP WHERE (extract(month from DATE_ENR))  = ex
 qry.bindValue(":ID",id);
 qry.exec();
 model->setQuery(qry);
-model->setHeaderData(0, Qt::Horizontal, QObject::tr("Type"));
-model->setHeaderData(1, Qt::Horizontal, QObject::tr("valeur"));
-model->setHeaderData(2, Qt::Horizontal, QObject::tr("Date"));
+model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
+model->setHeaderData(1, Qt::Horizontal, QObject::tr("Type"));
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("valeur"));
+model->setHeaderData(3, Qt::Horizontal, QObject::tr("Date"));
             ui->tableView->setModel(model);
 QSqlQueryModel *model2= new QSqlQueryModel();
 QSqlQuery qry2;
@@ -40,9 +44,10 @@ qry2.prepare("SELECT * FROM GESTIONDEP WHERE (extract(month from DATE_ENR))  = e
 qry2.bindValue(":ID2",id2);
 qry2.exec();
 model2->setQuery(qry2);
-model2->setHeaderData(0, Qt::Horizontal, QObject::tr("Type"));
-model2->setHeaderData(1, Qt::Horizontal, QObject::tr("valeur"));
-model2->setHeaderData(2, Qt::Horizontal, QObject::tr("Date"));
+model2->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
+model2->setHeaderData(1, Qt::Horizontal, QObject::tr("Type"));
+model2->setHeaderData(2, Qt::Horizontal, QObject::tr("valeur"));
+model2->setHeaderData(3, Qt::Horizontal, QObject::tr("Date"));
             ui->tableView_2->setModel(model2);
 
 QSqlQuery qry3;

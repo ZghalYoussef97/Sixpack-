@@ -18,6 +18,8 @@ Dialog44::Dialog44(QWidget *parent) :
     ui->setupUi(this);
     QString titre = "Entrez La Date";
     this->setWindowTitle(titre);
+    QDate date = QDate::currentDate();
+ui->dateEdit->setDate(date);
 
 }
 

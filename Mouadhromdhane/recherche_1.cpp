@@ -10,6 +10,8 @@ recherche_1::recherche_1(QWidget *parent) :
     ui->setupUi(this);
     QString titre = "Recherche(Un Jour)";
     this->setWindowTitle(titre);
+    QDate date = QDate::currentDate();
+ui->dateEdit->setDate(date);
 }
 
 recherche_1::~recherche_1()
@@ -27,9 +29,10 @@ void recherche_1::on_pushButton_2_clicked()
    qry.bindValue(":ID",id);
    qry.exec();
    model->setQuery(qry);
-   model->setHeaderData(0, Qt::Horizontal, QObject::tr("Type"));
-   model->setHeaderData(1, Qt::Horizontal, QObject::tr("valeur"));
-   model->setHeaderData(2, Qt::Horizontal, QObject::tr("Date"));
+   model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
+   model->setHeaderData(1, Qt::Horizontal, QObject::tr("Type"));
+   model->setHeaderData(2, Qt::Horizontal, QObject::tr("valeur"));
+   model->setHeaderData(3, Qt::Horizontal, QObject::tr("Date"));
            ui->tableView->setModel(model);
 
            QSqlQuery qry3;

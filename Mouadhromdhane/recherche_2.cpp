@@ -10,6 +10,8 @@ recherche_2::recherche_2(QWidget *parent) :
     ui->setupUi(this);
     QString titre = "Recherche(Un Mois)";
     this->setWindowTitle(titre);
+    QDate date = QDate::currentDate();
+ui->dateEdit->setDate(date);
 }
 
 recherche_2::~recherche_2()
@@ -26,9 +28,10 @@ void recherche_2::on_pushButton_2_clicked()
     qry.bindValue(":ID",id);
     qry.exec();
     model->setQuery(qry);
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("Type"));
-    model->setHeaderData(1, Qt::Horizontal, QObject::tr("valeur"));
-    model->setHeaderData(2, Qt::Horizontal, QObject::tr("Date"));
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("Type"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("valeur"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("Date"));
                 ui->tableView->setModel(model);
                 QSqlQuery qry3;
                 qry3.prepare("SELECT sum(VALEUR) FROM GESTIONREV WHERE (extract(month from ID))  = extract(month from :ID) AND (extract(YEAR from ID))  = extract(YEAR from :ID);");

@@ -23,14 +23,14 @@
     </rect>
    </property>
    <property name="title">
-    <string>GroupBox</string>
+    <string>Comparer</string>
    </property>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>31</x>
       <y>73</y>
-      <width>91</width>
+      <width>100</width>
       <height>16</height>
      </rect>
     </property>
