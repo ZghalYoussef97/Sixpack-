@@ -26,8 +26,8 @@ Dialog__6::Dialog__6(QWidget *parent) :
     qry2.exec();
     qry2.first();
 
-    QBarSet *set0 = new QBarSet("COMMITIONS_TRANSACTIONS");
-    QBarSet *set1 = new QBarSet("LIVRAISONS");
+    QBarSet *set0 = new QBarSet("Les revenus");
+    QBarSet *set1 = new QBarSet("Les depenses");
     QSqlQuery qry_1;
     qry_1.prepare("SELECT sum(VALEUR) FROM GESTIONREV WHERE (extract(YEAR from ID))  = extract(YEAR from :ID)");
     qry_1.bindValue(":ID",dd);

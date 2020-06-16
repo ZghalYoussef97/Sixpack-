@@ -19,7 +19,7 @@ Dialog_::Dialog_(QWidget *parent) :
     ui(new Ui::Dialog_)
 {
     ui->setupUi(this);
-    QString titre = "Options Avancées";
+    QString titre = "Options";
     this->setWindowTitle(titre);
 }
 

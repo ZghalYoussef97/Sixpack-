@@ -48,7 +48,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Par ans</string>
+     <string>Par Ans</string>
     </property>
    </widget>
    <widget class="QRadioButton" name="radioButton_12">
@@ -87,7 +87,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Par ans</string>
+     <string>Par Ans</string>
     </property>
    </widget>
    <widget class="QRadioButton" name="radioButton_3">

@@ -18,6 +18,11 @@ Dialog__55::Dialog__55(QWidget *parent) :
     ui(new Ui::Dialog__55)
 {
     ui->setupUi(this);
+    QString titre = "Entrez La Date";
+    this->setWindowTitle(titre);
+    QDate date = QDate::currentDate();
+ui->dateEdit->setDate(date);
+
 }
 
 Dialog__55::~Dialog__55()

@@ -11,6 +11,8 @@ autres::autres(QWidget *parent) :
     ui(new Ui::autres)
 {
     ui->setupUi(this);
+    QString titre = "Options avancées: Depenses/Revenus";
+    this->setWindowTitle(titre);
 }
 
 autres::~autres()

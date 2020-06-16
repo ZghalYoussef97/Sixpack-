@@ -8,6 +8,11 @@ Dialog__3::Dialog__3(QWidget *parent) :
     ui(new Ui::Dialog__3)
 {
     ui->setupUi(this);
+    QString titre = "Depenses/Revenus(Ans)";
+    this->setWindowTitle(titre);
+    QDate date = QDate::currentDate();
+ui->dateEdit->setDate(date);
+ui->dateEdit_2->setDate(date);
 }
 
 Dialog__3::~Dialog__3()
@@ -27,9 +32,10 @@ void Dialog__3::on_pushButton_clicked()
     qry.bindValue(":ID",id);
     qry.exec();
     model->setQuery(qry);
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("Type"));
-    model->setHeaderData(1, Qt::Horizontal, QObject::tr("valeur"));
-    model->setHeaderData(2, Qt::Horizontal, QObject::tr("Date"));
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("Type"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("valeur"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("Date"));
     ui->tableView->setModel(model);
     QSqlQuery qry3;
     qry3.prepare("SELECT sum(VALEUR) FROM GESTIONDEP WHERE (extract(YEAR from DATE_ENR))  = extract(YEAR from :ID);");
@@ -45,9 +51,10 @@ void Dialog__3::on_pushButton_clicked()
     qry2.bindValue(":ID2",id2);
     qry2.exec();
     model2->setQuery(qry2);
-    model2->setHeaderData(0, Qt::Horizontal, QObject::tr("Type"));
-    model2->setHeaderData(1, Qt::Horizontal, QObject::tr("valeur"));
-    model2->setHeaderData(2, Qt::Horizontal, QObject::tr("Date"));
+    model2->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
+    model2->setHeaderData(1, Qt::Horizontal, QObject::tr("Type"));
+    model2->setHeaderData(2, Qt::Horizontal, QObject::tr("valeur"));
+    model2->setHeaderData(3, Qt::Horizontal, QObject::tr("Date"));
     ui->tableView_2->setModel(model2);
 
     QSqlQuery qry4;

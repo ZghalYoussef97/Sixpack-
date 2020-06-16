@@ -28,7 +28,7 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>31</x>
+      <x>16</x>
       <y>73</y>
       <width>101</width>
       <height>16</height>
@@ -38,25 +38,12 @@
      <string>Choisissez entre</string>
     </property>
    </widget>
-   <widget class="QDateEdit" name="dateEdit_2">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>70</y>
-      <width>90</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="displayFormat">
-     <string>dd/MM/yyyy</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>259</x>
       <y>73</y>
-      <width>16</width>
+      <width>30</width>
       <height>16</height>
      </rect>
     </property>
@@ -64,24 +51,11 @@
      <string>et</string>
     </property>
    </widget>
-   <widget class="QDateEdit" name="dateEdit">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>70</y>
-      <width>90</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="displayFormat">
-     <string>dd/MM/yyyy</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>68</y>
+      <x>417</x>
+      <y>71</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -149,8 +123,8 @@
    <widget class="QLineEdit" name="lineEdit_3">
     <property name="geometry">
      <rect>
-      <x>558</x>
-      <y>73</y>
+      <x>533</x>
+      <y>74</y>
       <width>113</width>
       <height>22</height>
      </rect>
@@ -181,6 +155,123 @@
       <height>341</height>
      </rect>
     </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>49</y>
+      <width>111</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Depenses</string>
+    </property>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>0</y>
+       <width>141</width>
+       <height>66</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Depenses</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="dateEdit">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>26</y>
+       <width>90</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="displayFormat">
+      <string>dd/MM/yyyy</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>50</y>
+      <width>121</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Revenus</string>
+    </property>
+    <widget class="QGroupBox" name="groupBox_5">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>0</y>
+       <width>141</width>
+       <height>66</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Depenses</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="dateEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>25</y>
+       <width>90</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="displayFormat">
+      <string>dd/MM/yyyy</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_6">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>1</y>
+       <width>121</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Revenus</string>
+     </property>
+     <widget class="QGroupBox" name="groupBox_7">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>0</y>
+        <width>141</width>
+        <height>66</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Depenses</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dateEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>25</y>
+        <width>90</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="displayFormat">
+       <string>dd/MM/yyyy</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
   </widget>
  </widget>

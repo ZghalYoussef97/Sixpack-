@@ -10,6 +10,11 @@ Dialog__1::Dialog__1(QWidget *parent) :
     ui(new Ui::Dialog__1)
 {
     ui->setupUi(this);
+    QString titre = "Depenses/Revenus(Jours)";
+    this->setWindowTitle(titre);
+    QDate date = QDate::currentDate();
+ui->dateEdit->setDate(date);
+ui->dateEdit_2->setDate(date);
 }
 
 Dialog__1::~Dialog__1()
@@ -32,9 +37,10 @@ void Dialog__1::on_pushButton_2_clicked()
     qry.bindValue(":ID",id);
     qry.exec();
     model->setQuery(qry);
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("Type"));
-    model->setHeaderData(1, Qt::Horizontal, QObject::tr("valeur"));
-    model->setHeaderData(2, Qt::Horizontal, QObject::tr("Date"));
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("Type"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("valeur"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("Date"));
             ui->tableView->setModel(model);
 
             QSqlQuery qry3;
@@ -52,9 +58,10 @@ void Dialog__1::on_pushButton_2_clicked()
             qry2.bindValue(":ID2",id2);
             qry2.exec();
             model2->setQuery(qry2);
-            model2->setHeaderData(0, Qt::Horizontal, QObject::tr("Type"));
-            model2->setHeaderData(1, Qt::Horizontal, QObject::tr("valeur"));
-            model2->setHeaderData(2, Qt::Horizontal, QObject::tr("Date"));
+            model2->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
+            model2->setHeaderData(1, Qt::Horizontal, QObject::tr("Type"));
+            model2->setHeaderData(2, Qt::Horizontal, QObject::tr("valeur"));
+            model2->setHeaderData(3, Qt::Horizontal, QObject::tr("Date"));
                     ui->tableView_2->setModel(model2);
 
                     QSqlQuery qry4;
